@@ -1,1 +1,24 @@
-<p>numeros works!</p>
+<div class="text-layout">
+    <h1>Pipe DecimalPipe y Porcentaje</h1>
+    <p>Pipes para manipular números</p>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-4">
+        <p-card header="Informacion total" subheader="Es un simulador de información">
+            {{documentosAlmacenados | number}}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+        <p-card header="ventas del año" subheader="Es un simulador de ventas">
+           $ {{ ventasTotal | currency: 'MX'}}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+        <p-card header="Ganancia porcentual" subheader="Es un simulador de porcentajes">
+            {{ porcentaje | percent}}
+        </p-card>
+    </div>
+</div>
