@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { InformacionModule } from './informacion/informacion.module';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
 import { SharedModule } from './shared/shared.module';
@@ -19,9 +20,10 @@ registerLocaleData(localEsMX);
   imports: [
     BrowserModule,
     PrimeNgModule,
-    SharedModule,
     AppRouterModule,
-    InformacionModule
+    BrowserAnimationsModule, // Es para componentes de primeNg que usan animaciones
+    InformacionModule,
+    SharedModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es-MX' } 

@@ -1,1 +1,36 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+    <h1>Pipepoco comunes</h1>
+    <p>Pipes incluidos en el Common Module</p>
+</div>
+
+<div class="grid">
+    <div class="col-12 md-6">
+        <p-fieldset legend="i18nSelect Pipe" [transitionOptions]="'200ms'" [toggleable]="true">
+            <p>
+                Buenos días {{nombre}}, es un placer 
+                {{genero | i18nSelect:invitacionMaping}}
+                a nuestra boda
+            </p>
+            <button pButton 
+                    type="button" 
+                    label="Pruebame" 
+                    class="p-button-rounded p-button-raised"
+                    (click)="cambiarNomber()"
+            ></button>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md-6">
+        <p-fieldset legend="i18nPlural Pipe" [transitionOptions]="'200ms'" [toggleable]="true">
+            <p>
+                Actualmente tenemos 
+                {{clientes.length | i18nPlural: clientesMaping}}    
+            </p>
+            <button pButton 
+                    type="button" 
+                    label="Atiende a un cliente" 
+                    class="p-button-success p-button-rounded p-button-raised"
+                    (click)="atenderCliente()"
+            ></button>
+        </p-fieldset>
+    </div>
+</div>
