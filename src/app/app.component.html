@@ -1,10 +1,17 @@
 <div class="text-layout">
-    <p class="text-layout">xd</p>
 
-    <h1>Hola mundo</h1>
-    <button>boton</button>
+    <app-menu></app-menu>
+    <h1>Pipe app</h1>
     
-    
-    <button pButton type="button" label="Boton"></button>
+    <button pButton type="button" label="Boton" icon="pi pi-check-square" iconPos="right" class="p-button-help"></button>
+
+    <p-card>
+        <ng-template pTemplate="title">
+            Tema
+        </ng-template>
+        <ng-template pTemplate="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+        </ng-template>
+    </p-card>
 
 </div>
